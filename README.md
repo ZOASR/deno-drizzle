@@ -2,7 +2,8 @@
 
 A project skeleton example that integrates [Drizzle Orm](https://orm.drizzle.team/) inside a deno+node project
 
-> [!NOTE] the included example is using a postgres driver, feel free to integrate yours.
+> [!NOTE]
+> the included example is using a postgres driver, feel free to integrate yours.
 
 ## Get started
 
