@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@types/pg": "^8.11.0",
+    "drizzle-kit": "^0.20.14"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.29.3",
+    "pg": "^8.11.3"
+  },
+  "scripts": {
+    "migration:generate": "drizzle-kit generate:pg --config=drizzle.config.ts",
+    "migration:push": "drizzle-kit push:pg --config=drizzle.config.ts"
+  }
+}

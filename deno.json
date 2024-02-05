@@ -1,0 +1,8 @@
+{
+	"tasks": {
+		"dev": "deno run --allow-all main.ts",
+		"generate": "npm run migration:generate",
+		"push": "npm run migration:push"
+	},
+	"lock": false
+}

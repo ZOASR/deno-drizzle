@@ -1,0 +1,10 @@
+{
+	"deno.enable": false,
+	"deno.disablePaths": [
+		"./db",
+		"./drizzle.config.ts"
+	],
+	"deno.enablePaths": [
+		"./"
+	]
+}
