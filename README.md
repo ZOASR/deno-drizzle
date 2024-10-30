@@ -49,7 +49,7 @@ $ deno task push
 
 > You need to rerun the `generate` and `push` tasks everytime you modify your schema
 
-In `main.ts` you can write all your queries and regular ORM stuff and it will run inside your deno environment ten run :
+In `main.ts` you can write all your queries and regular ORM stuff and it will run inside your deno environment then run :
 
 ```bash
 $ deno task dev
