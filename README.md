@@ -15,8 +15,8 @@ $ cd deno-drizzle
 ## install npm dependencies
 
 ```sh
-$ npm i drizzle-orm [YOUR_DRIZZLE_DB_DRIVER]
-$ npm i -D drizzle-kit
+$ deno install npm:drizzle-orm npm:[YOUR_DRIZZLE_DB_DRIVER]
+$ deno install npm:drizzle-kit
 ```
 
 replace `[YOUR_DRIZZLE_DB_DRIVER]` with whatever driver you're using from drizzle see the [docs](https://orm.drizzle.team/docs/get-started-postgresql#postgresjs) here for examples
@@ -43,13 +43,13 @@ DB_URL=[YOUR_DB_CONNECTION_URL]
 once you're done modifying all the files you can finally run:
 
 ```bash
-$ deno task generate
-$ deno task push
+$ deno task migration:generate
+$ deno task migration:push
 ```
 
 > You need to rerun the `generate` and `push` tasks everytime you modify your schema
 
-In `main.ts` you can write all your queries and regular ORM stuff and it will run inside your deno environment ten run :
+In `main.ts` you can write all your queries and regular ORM stuff and it will run inside your deno environment then run :
 
 ```bash
 $ deno task dev

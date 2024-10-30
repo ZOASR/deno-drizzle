@@ -1,10 +1,11 @@
-import { drizzle } from "drizzle-orm/node-postgres";
+// @deno-types="npm:@types/pg"
 import PG from "pg";
-
-import { load } from "https://deno.land/std@0.214.0/dotenv/mod.ts";
+import { load } from "@std/dotenv";
+import { drizzle } from "drizzle-orm/node-postgres";
 import { user } from "./db/schema.ts";
-const ENVS = await load();
-const conn_url = ENVS["DB_URL"];
+
+await load({ export: true, envPath: ".env.local" });
+const conn_url = Deno.env.get("DB_URL");
 
 const client = new PG.Client({
 	connectionString: conn_url,

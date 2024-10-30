@@ -1,8 +1,15 @@
 {
 	"tasks": {
 		"dev": "deno run --allow-all main.ts",
-		"generate": "npm run migration:generate",
-		"push": "npm run migration:push"
+		"migration:generate": "deno run --allow-read --allow-write --allow-env --allow-sys --allow-run npm:drizzle-kit generate:pg --config=drizzle.config.ts",
+		"migration:push": "deno run --allow-read --allow-write --allow-env --allow-sys --allow-run npm:drizzle-kit push:pg --config=drizzle.config.ts"
 	},
-	"lock": false
+	"lock": false,
+	"imports": {
+		"@std/dotenv": "jsr:@std/dotenv@^0.225.2",
+		"@types/pg": "npm:@types/pg@^8.11.10",
+		"drizzle-kit": "npm:drizzle-kit@^0.26.2",
+		"drizzle-orm": "npm:drizzle-orm@^0.35.3",
+		"pg": "npm:pg@^8.13.1"
+	}
 }
